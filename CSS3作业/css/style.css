@@ -1,0 +1,141 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+/*天空*/
+.sky{
+	width: 100%;
+	height: 600px;
+	background: linear-gradient(rgba(196,228,253,1),rgba(255,255,255,0));
+}
+/*云*/
+.cloud{
+	width:165px;
+	height: 50px;
+	border-radius: 25px;
+	background-color: #fff;
+	position: relative;
+}
+div:before{
+	width:90px;
+	height: 65px;
+	position: absolute;
+	left:10px;
+	bottom:-5px;
+	-moz-transform:rotate(45deg); 
+ 	-webkit-transform:rotate(45deg);
+	transform:rotate(45deg);
+	content: "";
+	display: block;
+	background-color:#fff;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	-border-radius:50%;
+}
+div:after{
+	width:100px;
+	height: 100px;
+	position: absolute;
+	right:10px;
+	bottom:-5px;
+	content: "";
+	display: block;
+	background-color:#fff;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	-border-radius:50%;
+}
+/*上*/
+.cloud:nth-child(1){
+	top:30px;
+	left:20000px;
+	animation-name:cloudone;
+	animation-duration: 13s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 1s;
+	opacity: 0.8;
+}
+/*下*/
+.cloud:nth-child(2){
+	top:150px;
+	animation-name:cloudtwo;
+	animation-duration: 12s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	opacity: 0.8;
+}
+/*右*/
+.cloud:nth-child(3){
+	bottom:61px;
+	left:20000px;
+	transform: scale(.9,.9);
+	animation-name:cloudthree;
+	animation-duration: 12s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 3s;
+}
+/*小*/
+.cloud:nth-child(4){
+	top:25px;
+	left:20000px;
+	transform: scale(.7,.7);
+	animation-name:cloudfour;
+	animation-duration: 18s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	opacity: 0.8;
+	animation-delay: 2s;
+}
+/*大*/
+.cloud:nth-child(5){
+	bottom:85px;
+	left:20000px;
+	transform: scale(1.3,1.3);
+	animation-name:cloudfive;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 0.5s;
+}
+/*动画*/
+@keyframes cloudone{
+	from{left:1450px;}
+	to{left:-1600px;}
+}
+@keyframes cloudtwo{
+	from{left:1800px;}
+	to{left:-1600px;}
+}
+@keyframes cloudthree{
+	from{left:1800px;}
+	to{left:-1800px;}
+}
+@keyframes cloudfour{
+	from{left:1800px;}
+	to{left:-1800px;}
+}
+@keyframes cloudfive{
+	from{left:1800px;}
+	to{left:-1800px;}
+}
+/*草地*/
+.grass{
+	width: 100%;
+	height: 400px;
+	background: linear-gradient(rgba(255,255,255,0),rgba(148,190,89,1));
+	position: relative;
+}
+/*兔子*/
+img{
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	bottom:50px;
+	right:200px;
+}
