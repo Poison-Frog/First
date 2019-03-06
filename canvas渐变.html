@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>canvas渐变</title>
+</head>
+<body>
+    <canvas id="canvas" width="600px" height="600px">您的浏览器不支持</canvas>
+    <script>
+        var canvas=document.getElementById("canvas");
+        var ctx=canvas.getContext("2d");
+        var linearGradient=ctx.createLinearGradient(200,200,400,400);
+        linearGradient.addColorStop(0,'orange');
+        linearGradient.addColorStop(0.5,'pink');
+        linearGradient.addColorStop(0.7,'#abcdef');
+        ctx.fillStyle=linearGradient;
+        ctx.arc(300,300,100,0,2*Math.PI,true);
+        ctx.fill();
+    </script>
+</body>
+</html>
