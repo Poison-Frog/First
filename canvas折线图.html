@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="https://cdn.bootcss.com/Chart.js/2.5.0/Chart.js"></script>
+	</head>
+	<body>
+	<canvas id="canvas"></canvas>
+    <script>
+		var canvas = document.getElementById("canvas");
+        var barChart = new Chart(canvas, {
+            type: 'line',
+            data: {
+                labels: ["第一个月", "第二个月", "第三个月", "第四个月", "第五个月", "第六个月", "第七个月", "第八个月", "第九个月", "第十个月", "第十一个月", "第十二个月"],
+                datasets: [{
+                    label: '各种颜色',
+                    data: [70, 50, 85, 95, 23, 66, 40, 67, 30, 78, 9, 100],
+                    lineTension: 0,
+                    fill: false,
+                    pointRadius: 0,
+                    backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)',
+                    ],
+                    borderColor: 'green',
+                    borderWidth: 4
+                }, {
+                    label: '从h5到移动响应式开发',
+                    data: [50, 80, 45, 25, 55, 83, 40, 53, 60, 49, 70, 90],
+                    lineTension: 0,
+                    fill: false,
+                    pointRadius: 0,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                    ],
+                    borderColor: 'red',
+                    borderWidth: 4
+                }]
+            },
+                    options: {}
+        });
+	</script>
+	</body>
+
+</html>
