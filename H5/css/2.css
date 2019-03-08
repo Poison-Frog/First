@@ -1,0 +1,72 @@
+/* 在此完成CSS样式设置*/
+*{
+    padding:0;
+    margin:0;
+    border:none;
+    font-size:14px;
+    font-family:Arial;
+}
+section{
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+section h1{
+    font-size: 30px;
+    font-weight: lighter;
+    margin-bottom: 24px;
+}
+section h1 samp{
+    font-size: 30px;
+    color: #7c7c7c;
+}
+section aside{
+    float: left;
+    width: 440px;
+}
+section aside dl{
+    height: 71px;
+    position: relative;
+    margin-bottom: 20px;
+}
+section aside dl dt{
+    position: absolute;
+    left: 90px;
+    top: -1px;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: bold;
+}
+section aside dl dd:first-of-type{
+    position: absolute;
+    left: 20px;
+}
+section aside dl dd:first-of-type > span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 51px;
+    line-height: 51px;
+    text-align: center;
+    color:#fff;
+    font-size: 20px;
+}
+section aside dl dd:last-of-type{
+    position: absolute;
+    left: 90px;
+    top: 25px;
+}
+section article{
+    float: right;
+    width:720px;
+}
+section article p{
+    margin-bottom: 20px;
+}
+section article img {
+    width: 720px;
+    height: 200px;
+    margin-bottom: 20px;
+}
