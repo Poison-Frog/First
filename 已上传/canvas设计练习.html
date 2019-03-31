@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+        canvas{background-color:#000;opacity:0.7}
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="1200px" height="1000px">
+        您的浏览器不支持canvas
+    </canvas>
+    <script>
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+            context.shadowBlur = "10";
+            context.save();
+            context.shadowOffsetX = 7;
+            context.shadowOffsetY = 10;
+            context.shadowColor = "rgba(255,255,255,.3)" 
+            context.arc(161,161,50,0,Math.PI*2,true);
+            context.fillStyle = "rgba(255,255,0,.8)";
+            context.fill();
+            context.restore();
+            context.beginPath();
+            context.save();
+            context.shadowOffsetX = 15;
+            context.shadowOffsetY = 25;
+            context.shadowColor = "rgba(255,255,255,.7)"
+            context.font ="100px 楷体";
+            context.fillStyle = "rgba(255,255,255,1)";
+            context.fillText("山高月小",600,300);
+            context.restore();
+            context.beginPath();
+            context.shadowOffsetX = 20;
+            context.shadowColor = "rgba(0,0,255,.2)";
+            context.moveTo(0,1000);
+            context.quadraticCurveTo(180,184,294,1000);
+            context.strokeStyle = "rgba(0,0,255,.4)";
+            context.lineWidth = 20;
+            context.stroke();
+            context.beginPath();
+            context.moveTo(252,1000);
+            context.quadraticCurveTo(304,362,520,1000);
+            context.stroke();
+            context.beginPath();
+            context.moveTo(529,1000);
+            context.quadraticCurveTo(544,83,794,1000);
+            context.stroke();
+            context.beginPath();
+            context.moveTo(717,1000);
+            context.quadraticCurveTo(954,184,1200,1000);
+            context.stroke();
+    </script>
+</body>
+</html>

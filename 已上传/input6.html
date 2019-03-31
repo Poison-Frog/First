@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+	<title></title>
+<style type="text/css">
+    .container{position:relative;margin:30px;}
+    input{width:200px;height:30px;line-height:30px;border-radius:4px;border:1px solid #999;text-indent:40px;transition:all 0.3s;}
+    span.title{position:absolute;top:0px;left:5px;line-height:30px;transition:all 0.3s;}
+		/*鼠标移上去或者获得焦点、在此处填写代码*/
+	input:focus,input:hover{outline:0;text-indent:5px;}
+    input:focus+span.title,input:hover+span.title{transform:translateX(-40px);}
+		/*符合验证的label、在此处填写代码*/
+	input:valid~label:after{content:"你邮箱正确！";}
+    input:valid{border:1px solid green;}
+	    /*不符合验证的label、在此处填写代码*/
+	input:invalid~label:after{content:"你邮箱错误！";}
+    input:invalid{border:1px solid red;}    
+	</style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <input type="email" placeholder="输入邮箱" required>
+            <span class="title">邮箱</span>
+            <label></label>
+        </form>
+    </div>
+</body>
+</html>
